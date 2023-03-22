@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "4de04eefc4e9211c8a67b58c20c9ea97",
+    "entities": [
+      {
+        "tableName": "Contacto",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID_contacto` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `fecha` TEXT, `telefono` TEXT NOT NULL, `nota` TEXT, `rutaImagen` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "ID_contacto",
+            "columnName": "ID_contacto",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nota",
+            "columnName": "nota",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rutaImagen",
+            "columnName": "rutaImagen",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "ID_contacto"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4de04eefc4e9211c8a67b58c20c9ea97')"
+    ]
+  }
+}
